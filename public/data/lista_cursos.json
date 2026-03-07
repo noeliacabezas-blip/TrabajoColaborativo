@@ -1,0 +1,65 @@
+{
+	"curso-1":{
+		"curso": "Curso de Hacking Ético",
+		"categoria": "Tecnología",
+		"nivel": "Medio",
+		"img": "img/curso_1_logo.jpg",
+		"url": "curso_detalle_1.html"
+	},
+	"curso-2":{
+		"curso": "Curso de Gestión de Empresas",
+		"categoria": "Empresa",
+		"nivel": "Medio",
+		"img": "img/curso_2_logo.jpg",
+		"url": "curso_detalle_2.html"
+	},
+	"curso-3":{
+		"curso": "Curso de Diseño Industrial",
+		"categoria": "Diseño",
+		"nivel": "Medio",
+		"img": "img/curso_3_logo.jpg",
+		"url": "curso_detalle_3.html"
+	},
+	"curso-4":{
+		"curso": "Curso Básico de Alemán",
+		"categoria": "Idiomas",
+		"nivel": "Básico",
+		"img": "img/curso_4_logo.jpg",
+		"url": "curso_detalle_4.html"
+	},
+	"curso-5":{
+		"curso": "Curso de comercio Internacional",
+		"categoria": "Empresa",
+		"nivel": "Avanzado",
+		"img": "img/curso_5_logo.jpg",
+		"url": "curso_detalle_5.html"
+	},
+	"curso-6":{
+		"curso": "Curso Básico de Alemán II",
+		"categoria": "Idiomas",
+		"nivel": "Básico",
+		"img": "img/curso_6_logo.jpg",
+		"url": "curso_detalle_6.html"
+	},
+	"curso-7":{
+		"curso": "Curso de Excel Avanzado",
+		"categoria": "Tecnología",
+		"nivel": "Avanzado",
+		"img": "img/curso_7_logo.jpg",
+		"url": "curso_detalle_7.html"
+	},
+	"curso-8":{
+		"curso": "Curso de Fundamentos de IA",
+		"categoria": "Tecnología",
+		"nivel": "Básico",
+		"img": "img/curso_8_logo.jpg",
+		"url": "curso_detalle_8.html"
+	},
+	"curso 9":{
+		"curso": "Diseñador Web",
+		"categoria": "Diseño",
+		"nivel": "Avanzado",
+		"img": "img/curso_9_logo.jpg",
+		"url": "curso_detalle_9.html"
+	}
+}

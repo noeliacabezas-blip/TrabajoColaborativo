@@ -1,0 +1,38 @@
+[
+	{
+		"nombre": "José Álvarez Álvarez",
+		"email": "jalvarez@formacionglobalonline.es", 
+        "especialidad": "Tecnología",         
+		"foto": "./img/persona_1.png"
+	},
+	{
+		"nombre": "María García García",
+		"email": "mgarcia@formacionglobalonline.es", 
+        "especialidad": "Empresa",         
+		"foto": "./img/persona_2.png"
+	},
+	{
+		"nombre": "Teresa Alonso Alonso",
+		"email": "talonso@formacionglobalonline.es", 
+        "especialidad": "Diseño",         
+		"foto": "./img/persona_3.png"
+	},
+	{
+		"nombre": "Jesús Castro Castro",
+		"email": "jcastro@formacionglobalonline.es", 
+        "especialidad": "Idioma",         
+		"foto": "./img/persona_4.png"
+	},
+	{
+		"nombre": "Ana Blanco Blanco",
+		"email": "ablanco@formacionglobalonline.es", 
+        "especialidad": "Tecnología",         
+		"foto": "./img/persona_5.png"
+	},
+	{
+		"nombre": "Ana Rodriguez Fernández",
+		"email": "arodriguez@formacionglobalonline.es", 
+        "especialidad": "Diseño",         
+		"foto": "./img/persona_6.png"
+	}
+]

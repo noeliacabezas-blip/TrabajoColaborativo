@@ -1,0 +1,92 @@
+[
+	{
+		"titulo": "Curso de Hacking Ético",
+		"categoria": "Tecnología",
+		"nivel": "Medio" ,
+		"duracion": "300 horas",
+		"descripcion": "Con el Curso online de Hacking Ético podrás aplicar las perspectivas del atacante, identificando, evaluando y reduciendo los riesgos potenciales para los sistemas.\nDespliega estrategias que optimicen la seguridad dentro del marco ético y legal.",
+		"imagen": "./img/curso_1_logo.jpg",    
+		"emailProfesor": "jalvarez@fgo.es",
+		"temario": "TEST_1"	
+	},
+	{
+		"titulo": "Curso de Gestión de Empresas",
+		"categoria": "Empresa",
+		"nivel": "Medio" ,
+		"duracion": "200 horas",
+		"descripcion": "Lidera la gestión operativa de cualquier negocio, a través de la planificación empresarial, el marketing y las fuentes de financiación que lo hagan viable.\nEsta formación será tu aliada para darle alas a tu ambición como directivo, empresario o emprendedor y encabezar tus proyectos",
+		"imagen": "./img/curso_2_logo.jpg",    
+		"emailProfesor": "mgarcia@fgo.es",
+		"temario": "TEST_2"	
+	},
+	{
+		"titulo": "Curso de Diseño Industrial",
+		"categoria": "Diseño",
+		"nivel": "Medio" ,
+		"duracion": "300 horas",
+		"descripcion": "Con este curso te preparas para tener bajo control todas las fases del proceso de elaboración de producto, desde los primeros bocetos hasta la selección de los materiales o su ergonomía para su producción.\nPrepárate con un completo temario, masterclasses, videoconferencias, videotutoriales, prácticas y un seguimiento personalizado que te permitirá avanzar a tu propio ritmo.",
+		"imagen": "./img/curso_3_logo.jpg",    
+		"emailProfesor": "talonso@fgo.es",
+		"temario": "TEST_3"	
+	},
+	{
+		"titulo": "Curso Básico de Alemán",
+		"categoria": "Idiomas",
+		"nivel": "Básico" ,
+		"duracion": "150 horas",
+		"descripcion": "Este curso de alemán comenzará con la introducción al alfabeto alemán y continuará enseñando gramática, vocabulario y conversación en alemán.\nCon más de 32 capítulos de gramática, este curso también incluye 17 videos animados con cuales puedes aprender de tener conversaciones básicas en alemán así como aprenderás el vocabulario alemán.\nDespués de cada lección, encontrarás un cuestionario y un archivo PDF de tareas para que puedas practicar lo que has acabado de aprender.",
+		"imagen": "./img/curso_4_logo.jpg",    
+		"emailProfesor": "jcastro@fgo.es",
+		"temario": "TEST_4"	
+	},
+	{
+		"titulo": "Curso de comercio Internacional",
+		"categoria": "Empresa",
+		"nivel": "Avanzado" ,
+		"duracion": "350 horas",
+		"descripcion": "Con el Curso de Comercio Internacional estarás a la altura de la gestión administrativa de las importaciones, exportaciones, proveedores y almacenaje al nivel de los expertos.\nFórmate con una metodología práctica, liderada por profesionales y avalada por la ACOCEX. ¡Transforma tu futuro!",
+		"imagen": "./img/curso_5_logo.jpg",    
+		"emailProfesor": "mgarcia@fgo.es",
+		"temario": "TEST_5"
+	},
+	{
+		"titulo": "Curso Básico de Alemán II",
+		"categoria": "Idiomas",
+		"nivel": "Básico" ,
+		"duracion": "150 horas",
+		"descripcion": "Después de completar este curso, habrás aprendido toda la gramática A2 del idioma alemán.\nAprenderás modismos alemanes para sonar mas como un nativo.\nAprenderás cosas interesantes sobre la cultura alemana.",
+		"imagen": "./img/curso_6_logo.jpg",    
+		"emailProfesor": "jcastro@fgo.es",
+		"temario": "TEST_6"	
+	},
+	{
+		"titulo": "Curso de Excel Avanzado",
+		"categoria": "Tecnología",
+		"nivel": "Avanzado" ,
+		"duracion": "400 horas",
+		"descripcion": "Deja de usar Excel solo como una hoja de cálculo. Con este curso de excel avanzado online aprenderás a dominar las herramientas más potentes de Microsoft para llevar tus datos al siguiente nivel.\nIncluye:\nPower Query para limpiar y transformar información de forma automática.\nPower Pivot para modelar grandes volúmenes de datos con rapidez.\nPower BI para crear paneles interactivos y visualizaciones que facilitan la toma de decisiones.",
+		"imagen": "./img/curso_7_logo.jpg",    
+		"emailProfesor": "ablanco@fgo.es",
+		"temario": "TEST_7"	
+	},
+	{
+		"titulo": "Curso de Fundamentos de IA",
+		"categoria": "Tecnología",
+		"nivel": "Básico" ,
+		"duracion": "200 horas",
+		"descripcion": "La inteligencia artificial ha revolucionado todos los sectores y se ha convertido en una herramienta clave para generar ideas, crear contenido, automatizar tareas y tomar decisiones.\nCon este curso aprendes a utilizar las plataformas de inteligencia artificial más populares y desarrollas tus habilidades en ingeniería y refinamiento de prompts para conseguir los mejores resultados.",
+		"imagen": "./img/curso_8_logo.jpg",    
+		"emailProfesor": "jalvarez@fgo.es",
+		"temario": "TEST_8"
+	},
+	{
+		"titulo": "Diseñador Web",
+		"categoria": "Diseño",
+		"nivel": "Avanzado" ,
+		"duracion": "500 horas",
+		"descripcion": "El diseño profesional de páginas web es mucho más que estética: implica combinar creatividad, usabilidad y funcionalidad.\nEste curso te prepara para dominar los lenguajes HTML5 y CSS3, trabajar con la Suite Adobe Creative Cloud y crear sitios web modernos y optimizados para cualquier dispositivo.",
+		"imagen": "./img/curso_9_logo.jpg",    
+		"emailProfesor": "arodriguez@fgo.es",
+		"temario": "TEST_9"	
+	}
+]

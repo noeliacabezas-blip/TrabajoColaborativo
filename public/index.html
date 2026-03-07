@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>		
+		<meta name="author" content="Noelia Cabezas">
+		<meta name="description" content="Cursos de formación en línea">
+		<meta name="keywords" content="cursos, formación, noticias, tecnología, diseño, idiomas, empresa">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">		
+		<title>Formación Global Online | Portada</title>
+		<!-- Importamos la fuente y el fichero CSS de estilos-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link href="style/estilos.css" rel="stylesheet" type="text/css">
+		
+		<!-- Para redes sociales -->
+		<meta property="og:title" content="Formación Global Online">	
+	</head>
+	<body>
+		<header class="sticky-top bg-white border-bottom">
+			<!-- Encabezado corporativo del sitio web -->
+			<div>	
+				<figure>
+					<img src="img/logo_2.jpg" alt="Logo de Formación Global Online">
+				</figure>				
+			</div>	
+			
+			<nav class="navbar navbar-expand-lg navbar-dark fondo_corporativo_azul_marino">
+				<div class="container-fluid">     
+					<!-- Crea un botón de tres rayas horizontales para el diseño responsible si la pantalla es más pequeña, si pulsas se despliega el menú -->
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- Elementos del menú -->
+					<div class="collapse navbar-collapse" id="menuNavegacion">
+						<ul class="navbar-nav me-auto">
+							<li class="nav-item"><a class="nav-link text-white" href="index.html">Portada</a></li>
+							<li class="nav-item"><a class="nav-link text-white" href="listado_cursos.html">Catálogo de Cursos</a></li>
+							<li class="nav-item"><a class="nav-link text-white" href="profesores.html">Profesores</a></li>
+							<!-- Desplegable de cursos individuales -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Cursos disponibles</a>								
+								<ul class="dropdown-menu dropdown-menu-dark fondo_corporativo_azul_marino ">
+									<li><a class="dropdown-item text-white" href="curso_detalle_1.html">Hacking Ético</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_2.html">Gestión de Empresas</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_3.html">Diseño Industrial</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_4.html">Alemán Básico</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_5.html">Comercio Internacional</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_6.html">Alemán Básico II</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_7.html">Excel Avanzado</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_8.html">Fundamentos de IA</a></li>
+									<li><a class="dropdown-item text-white" href="curso_detalle_9.html">Diseñador Web</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+						</ul>                
+						<!-- Botones tamaño de texto -->
+						<div class="d-flex">
+							<button id="btn-aumentar" class="btn btn-outline-light btn-sm me-2">A+</button>
+							<button id="btn-disminuir" class="btn btn-outline-light btn-sm">A-</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>		
+			<h1>Bienvenido a la mejor formación online</h1>
+			<!-- Carrusel -->			
+			<div id="carrusel_cursos" class="carousel slide  mx-auto mt-5  mb-5  d-table " data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carrusel_cursos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diseño Industrial"></button>
+					<button type="button" data-bs-target="#carrusel_cursos" data-bs-slide-to="1" aria-label="Alemán Básico"></button>
+					<button type="button" data-bs-target="#carrusel_cursos" data-bs-slide-to="2" aria-label="Alemán Básico II"></button>
+					<button type="button" data-bs-target="#carrusel_cursos" data-bs-slide-to="3" aria-label="Excel Avanzado"></button>
+					<button type="button" data-bs-target="#carrusel_cursos" data-bs-slide-to="4" aria-label="Fundamentos de IA"></button>
+				</div>
+				<div class="carousel-inner rounded-4 overflow-hidden">
+					<div class="carousel-item active">
+						<a href="curso_detalle_3.html">
+							<picture>
+								<!-- Tamaño pequeño para movil -->
+								<source srcset="img/curso_3_m.png" media="(max-width: 767px)">
+								<!-- Tamaño mediano para tablet -->
+								<source srcset="img/curso_3_t.png" media="(max-width: 991px)">
+								<!-- Tamaño para PC -->
+								<img src="img/curso_3.webp" class="d-block mx-auto" alt="Diseño Industrial">
+							</picture>
+						</a>
+						<div class="carousel-caption d-none d-md-block">        
+							<p class="display-4 fw-bold">Diseño Industrial</p>
+						</div>
+					</div>					
+					<div class="carousel-item">
+						<a href="curso_detalle_4.html">
+							<picture>
+								<!-- Tamaño pequeño para movil -->
+								<source srcset="img/curso_4_m.png" media="(max-width: 767px)">
+								<!-- Tamaño mediano para tablet -->
+								<source srcset="img/curso_4_t.png" media="(max-width: 991px)">
+								<!-- Tamaño para PC -->
+								<img src="img/curso_4.webp" class="d-block mx-auto" alt="Alemán Básico">
+							</picture>
+						</a>
+						<div class="carousel-caption d-none d-md-block">        
+							<p class="display-4 fw-bold">Alemán Básico</p>
+						</div>
+					</div>					
+					<div class="carousel-item">
+						<a href="curso_detalle_6.html">
+							<picture>
+								<!-- Tamaño pequeño para movil -->
+								<source srcset="img/curso_6_m.png" media="(max-width: 767px)">
+								<!-- Tamaño mediano para tablet -->
+								<source srcset="img/curso_6_t.png" media="(max-width: 991px)">
+								<!-- Tamaño para PC -->
+								<img src="img/curso_6.webp" class="d-block mx-auto" alt="Alemán Básico II">
+							</picture>
+						</a>
+						<div class="carousel-caption d-none d-md-block">        
+							<p class="display-4 fw-bold">Alemán Básico II</p>
+						</div>
+					</div>					
+					<div class="carousel-item">
+						<a href="curso_detalle_7.html">
+							<picture>
+								<!-- Tamaño pequeño para movil -->
+								<source srcset="img/curso_7_m.png" media="(max-width: 767px)">
+								<!-- Tamaño mediano para tablet -->
+								<source srcset="img/curso_7_t.png" media="(max-width: 991px)">
+								<!-- Tamaño para PC -->
+								<img src="img/curso_7.webp" class="d-block mx-auto" alt="Excel Avanzado">
+							</picture>
+						</a>
+						<div class="carousel-caption d-none d-md-block">        
+							<p class="display-4 fw-bold">Excel Avanzado</p>
+						</div>						
+					</div>
+					<div class="carousel-item">
+						<a href="curso_detalle_8.html">
+							<picture>
+								<!-- Tamaño pequeño para movil -->
+								<source srcset="img/curso_8_m.png" media="(max-width: 767px)">
+								<!-- Tamaño mediano para tablet -->
+								<source srcset="img/curso_8_t.png" media="(max-width: 991px)">
+								<!-- Tamaño para PC -->
+								<img src="img/curso_8.webp" class="d-block mx-auto" alt="Fundamentos de IA">
+							</picture>
+						</a>
+						<div class="carousel-caption d-none d-md-block">        
+							<p class="display-4 fw-bold">Fundamentos de IA</p>
+						</div>
+					</div>									
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carrusel_cursos" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Anterior</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carrusel_cursos" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Siguiente</span>
+				</button>
+			</div>		
+			<!-- Bloques informativos -->
+			<div class="container-fluid mt-5">
+				<div class="row g-4">
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro"> 
+							<h2>Formamos tu futuro:</h2>
+							<p>
+								<span class="fw-bold">Formación Global Online</span> es una empresa dedicada a la formación en línea, cuyo principal objetivo es facilitar el acceso al aprendizaje desde cualquier lugar y en cualquier momento.
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									 A través de una plataforma moderna y accesible, la empresa ofrece una amplia variedad de cursos online orientados tanto a estudiantes como a profesionales que desean mejorar sus competencias y ampliar sus conocimientos.
+									 <br>
+									 La oferta formativa abarca distintas áreas, como tecnología, empresa, diseño e idiomas, entre otras, adaptándose a las necesidades actuales del mercado laboral. Los cursos están diseñados para ser flexibles, prácticos y actualizados, permitiendo al alumnado avanzar a su propio ritmo y adquirir habilidades aplicables en el entorno profesional
+								</span>								
+							</p>
+							<span class="boton-leer fw-bold " style="cursor: pointer;">Leer más</span>							
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Nuestra formación:</h2>
+							<div>
+								En el entorno laboral actual, la actualización constante es la clave del éxito. Tenemos a tu disposición cursos diseñados por expertos que te ayudarán a desarrollar las habilidades más demandadas.
+								<span class="puntos">...</span>
+								<div class="texto_extra" style="display: none;">
+									 <br>
+									 Actualmente contamos en nuestro catálogo con formación especializada en:
+									 <ul>
+										<li class="fw-bold">Tecnología</li>
+										<li class="fw-bold">Empresa</li>
+										<li class="fw-bold">Diseño</li>
+										<li class="fw-bold">Idiomas</li>							
+									</ul>
+									<br>Puedes consultar nuestro catálogo de cursos <a href="listado_cursos.html" title="Consulta el catálogo de cursos">aquí</a>.
+								</div>
+								<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>								
+							</div>
+							
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Nuevos cursos:</h2>
+							<p>
+								Trabajamos para ofrecer los mejores recursos didácticos y ponerlos a disposición de nuestros alumnos. Con el fin de mantener la mejor oferta disponible, continuamente estamos desarrollando nuevos cursos 
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									y ampliamos las áreas de especialización de forma sostenible para no comprometer la calidad de nuestra formación.
+									 <br>
+									 Próximamente contaremos con cursos especializados en: <span class="negrita">Marketing digital</span> y <span class="negrita">Recursos Humanos.</span>									 									
+								</span>								
+							</p>
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Nueva colaboración con la empresa <span class="fw-bold">Diseños a medida</span></h2>
+							<p>
+								<span class="fw-bold">Formación Global Online</span> ha llegado a un acuerdo con  la empresa <span class="fw-bold">Diseños a medida</span>  
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									, la consultora líder en soluciones creativas personalizadas.
+									 <br>
+									 El objetivo de este acuerdo es el desarrollo y lanzamiento de un nuevo programa formativo de alto nivel: el <span class="fw-bold">Máster en Diseño Personalizado</span>.								
+								</span>								
+							</p>		
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>¡Damos la bienvenida a <span class="negrita">Jesús Castro</span> a nuestro claustro docente!"</h2>
+							<p>
+								En <span class="fw-bold">Formación Global Online</span> seguimos creciendo para ofrecerte el mejor aprendizaje. Por eso, nos hace mucha ilusión anunciar la incorporación de <span class="fw-bold">Jesús Castro  </span>
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									a nuestra plantilla académica.
+									<br>
+									Jesús se une a nosotros como profesor especialista en idiomas, aportando una sólida experiencia. Aunque domina diversas lenguas, su gran especialidad es el alemán, donde destaca por su capacidad para simplificar el aprendizaje y hacerlo accesible a todos los niveles.								
+								</span>								
+							</p>
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Nuevo programa de becas</h2>
+							<p>
+								En nuestro compromiso por democratizar el acceso a una educación de calidad, <span class="fw-bold">Formación Global Online</span> se enorgullece de anunciar una nueva convocatoria de <span class="fw-bold">Becas al Talento</span>, patrocinadas íntegramente por nuestro partner tecnológico, <span class="fw-bold">Estamos en la nube</span>.
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									<br>
+									Gracias a este acuerdo de colaboración, ponemos a disposición de nuestra comunidad una serie de ayudas económicas destinadas a cubrir hasta el 70% del coste de matriculación en nuestros cursos más demandados.
+									<br>
+									Estamos ultimando los detalles, próximamente publicaremos las bases y el formulario para solicitarlas.
+								</span>								
+							</p>
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Marketing Digital: Lidera la estrategia del futuro</h2>
+							<p>
+								¡El mundo digital no espera! En <span class="fw-bold">Formación Global Online</span> estamos ultimando los detalles de nuestra nueva línea de cursos en <span class="fw-bold">Marketing Digital</span>.
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									<br>
+									Diseñados para quienes buscan resultados reales, estos programas te enseñarán a dominar el SEO/SEM, la analítica avanzada y las últimas tendencias en Social Ads. Ya seas un emprendedor o un profesional buscando actualizarse, nuestra formación te dará las herramientas para posicionar cualquier marca en lo más alto.
+								</span>								
+							</p>
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>							
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Recursos Humanos: Gestión del talento en la era 4.0</h2>
+							<p>
+								Las empresas ya no se gestionan como antes. Por eso, en <span class="fw-bold">Formación Global Online</span> lanzamos nuevos cursos especializados en <span class="fw-bold">Recursos Humanos</span>, centrados en la transformación digital del departamento.
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									<br>
+									Aprende a gestionar equipos híbridos, domina el Employer Branding y descubre cómo el People Analytics puede mejorar la toma de decisiones. Es el momento de convertirte en el líder que las organizaciones modernas necesitan para retener y potenciar el talento.
+								</span>								
+							</p>
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<article class="entrada h-100 border rounded p-3 mb-3 fondo_corporativo_azul_claro">
+							<h2>Abierto el periodo de matriculación en Formación Global Online</h2>
+							<p>
+								¿Tienes una meta profesional y aún no has dado el paso? ¡Este es el momento! Te recordamos que nuestra plataforma de <span class="fw-bold">Formación Global Online</span> mantiene abiertas las inscripciones para todo nuestro catálogo de cursos.
+								<span class="puntos">...</span>
+								<span class="texto_extra" style="display: none;">
+									<br>
+									 Hemos diseñado cada programa para que adquieras habilidades prácticas y reales, adaptadas a lo que las empresas buscan hoy.
+								</span>								
+							</p>		
+							<span class="boton-leer fw-bold" style="cursor: pointer;">Leer más</span>
+						</article>
+					</div>					
+				</div>
+			</div>				
+		</main>		
+		<!-- Pie de página -->
+		<footer class="fondo_corporativo_azul_marino text-white py-2 mt-2">
+			<div class="container text-center">
+				<div class="row align-items-center small">
+					<!-- Datos Administrador -->
+					<div class="col-md-4 mb-3 mb-md-0">
+						<p class="mb-0"><strong>Administrador:</strong> admin@formacionglobal.es</p>						
+					</div>
+
+					<!-- Accesibilidad y Legal -->
+					<div class="col-md-5 mb-3 mb-md-0">
+						<a href="#" data-bs-toggle="modal" data-bs-target="#modalLegal" class="text-white text-decoration-none me-3">Aviso Legal</a>
+						<a href="#" data-bs-toggle="modal" data-bs-target="#modalAccesibilidad" class="text-white text-decoration-none me-3">Accesibilidad</a>
+						<span>&copy; 2026 Formación Global Online.</span>
+					</div>
+
+					<!-- Fecha y Hora (Interactividad JS) -->
+					<div class="col-md-3">
+						<span id="txt-fecha"></span>												
+					</div>
+				</div>
+			</div>			
+		</footer>
+		<!-- Aviso Legal-->
+		<div class="modal fade" id="modalLegal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg"> 
+				<div class="modal-content">
+					<div class="modal-header fondo_corporativo_azul_marino text-white">
+						<h1 class="modal-title text-white" id="modalLegalLabel">Aviso Legal - Formación Global Online</h1>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+					</div>
+					<div class="modal-body" style="max-height: 400px; overflow-y: auto;">
+						<div class="card shadow-sm card-accesibilidad">
+							<div class="card-body p-5">		
+								<div class="mb-4">
+									<h1 class="display-6 fw-bold text-dark">Aviso Legal</h1>
+									<p class="text-muted">Bienvenido a la página de información legal de <span class="fw-bold">Formación Global Online.</span></p>
+									<hr>
+								</div>								
+								<div class="texto-contenido">
+									<h2 class="mt-4">1. DATOS IDENTIFICATIVOS</h2>						
+									<p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se reflejan los siguientes datos: la empresa titular de dominio web es Formación Global Online (en adelante, la Empresa), con domicilio a estos efectos en Calle de la Innovación Educativa, nº 10, Madrid, C.P. 28045. Correo electrónico de contacto: secretaria@formacionglobalonline.es.</p>
+									<h2 class="mt-4">2. PROTECCIÓN DE DATOS (RGPD)</h2>
+									<p>Los datos recogidos en nuestro formulario de contacto se tratan con la finalidad de gestionar consultas académicas. Usted tiene derecho a acceder, rectificar y suprimir sus datos escribiendo a <a href="mailto:protecciondatos@formacionglobalonline.es">protecciondatos@formacionglobalonline.es</a>.</p>
+									<h2 class="mt-4">3. PROPIEDAD INTELECTUAL</h2>
+									<p>Todos los contenidos del sitio (textos, tablas de cursos, logotipos) son propiedad de la Empresa. Queda prohibida su reproducción sin permiso previo.</p>
+									<h2 class="mt-4">4. EXCLUSIÓN DE RESPONSABILIDAD</h2>
+									<p>La Empresa no se hace responsable de los daños que pudieran derivarse de interferencias, omisiones, virus informáticos o desconexiones en el funcionamiento de este sistema electrónico, motivadas por causas ajenas a Formación Global Online.</p>
+									<h2 class="mt-4">5. ACEPTACIÓN Y CONSENTIMIENTO</h2>
+									<p>El Usuario declara haber sido informado de las condiciones sobre protección de datos de carácter personal, aceptando y consintiendo el tratamiento de los mismos por parte de Formación Global Online en la forma y para las finalidades indicadas en la presente Política de Privacidad.</p>																		
+								</div>								
+								<div class="text-center mt-5">
+									<small>Última actualización: 19 de febrero de 2026</small>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Accesibilidad-->
+		<div class="modal fade" id="modalAccesibilidad" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg"> 
+				<div class="modal-content">
+					<div class="modal-header  fondo_corporativo_azul_marino text-white">
+						<h1 class="modal-title text-white" id="modalAccesibilidadLabel">Política de Accesibilidad - Formación Global Online</h1>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+					</div>
+					<div class="modal-body" style="max-height: 400px; overflow-y: auto;">						
+						<div class="card shadow-sm card-accesibilidad">
+							<div class="card-body p-5">	
+								<div class="mb-4">
+									<h1 class="display-6 fw-bold text-dark">Política de Accesibilidad</h1>
+									<p class="text-muted">Compromiso con la inclusión digital de <strong>Formación Global Online</strong>.</p>
+									<hr>
+								</div>
+								<div class="texto-contenido">
+									<p>En <strong>Formación Global Online</strong>, trabajamos para que nuestra plataforma de cursos y formularios sean accesibles para todos, independientemente de sus capacidades físicas o técnicas.</p>
+									<h2 class="mt-4"><span class="seccion-icono">⌨️</span>Navegación por teclado</h2>
+									<p>Hemos optimizado nuestro sitio para que puedas navegar por la tabla de cursos y completar el formulario de contacto utilizando únicamente la tecla <strong>Tabulador</strong>.</p>
+									<h2 class="mt-4"><span class="seccion-icono">🎨</span>Contraste y Diseño</h2>
+									<p>El diseño utiliza contrastes de color adecuados para facilitar la lectura a personas con baja visión y se adapta perfectamente al zoom del navegador hasta un 200% sin perder funcionalidad.</p>
+									<h2 class="mt-4"><span class="seccion-icono">🔊</span>Lectores de Pantalla</h2>
+									<p>Nuestros campos de formulario incluyen etiquetas descriptivas y atributos <code>aria-label</code> para asegurar que el software de lectura de pantalla pueda guiarte correctamente durante el proceso.</p>
+									<!-- Cuadro de contacto rápido -->
+									<div class="alert alert-success mt-5 border-0 shadow-sm">
+										<h3 class="alert-heading">¿Has encontrado alguna barrera?</h3>
+										<p class="mb-0">Si tienes dificultades para acceder a algún contenido, por favor escríbenos a: 
+											<a href="mailto:accesibilidad@formacionglobalonline.es" class="fw-bold text-success text-decoration-none">accesibilidad@formacionglobalonline.es</a>
+										</p>
+									</div>
+								</div>
+								<div class="mt-5 d-flex justify-content-between align-items-center">
+									<small class="text-muted italic">Versión 1.0 - Febrero 2026</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		<script src="scripts/scr_comunes.js"></script>
+		<script src="scripts/scr_index.js"></script>
+	</body>
+</html>

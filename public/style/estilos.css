@@ -1,0 +1,136 @@
+/* Reglas de estilo para el sitio web de Formación Global Online */
+/* Reset de estilos básicos*/
+*{
+	box-sizing: border-box;	/* mantiene los tamaños de cajas fijos, bordes y rellenos se calculan hacia adentro*/
+}
+
+/* Declaración de propiedades personalizadas, son colores por ejemplo que se usan en diversos atributos*/
+:root{
+	--color-texto: rgb(51,51,51);
+	--color-corporativo-azul-marino: rgb(14,49,81);	
+	--color-corporativo-azul-claro: rgb(227,245,253);
+	--color-corporativo-azul-medio: rgb(11,149,196);
+}
+
+.fondo_corporativo_azul_marino {
+	background-color: var(--color-corporativo-azul-marino); /* El color de fondo del menú */
+}
+
+.fondo_corporativo_azul_claro{
+	background-color: var(--color-corporativo-azul-claro);
+}
+
+.fondo_corporativo_azul_medio{
+	background-color: var(--color-corporativo-azul-medio);
+}
+
+/* Pone un fondo bajo el título del curso para que se pueda leer bien */
+#carrusel_cursos .carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    border-radius: 10px;
+    padding: 15px;
+	width: fit-content;
+	height: auto;	
+    margin: 0 auto;        /* Centrado horizontal */   
+}
+
+/* Se da formato a los botenes de previo y siguiente para que se vean mejor */
+.carousel-control-prev, .carousel-control-next {
+    width: 45px;           /* Ancho fijo del área de clic */
+    height: 45px;          /* Alto fijo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro circular */
+	opacity: 1;
+    border-radius: 50%;    /* Los hace redondos */
+    top: 50%;              /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste perfecto al centro */
+}
+
+/* Saca el botón previo para que esté fuera de la imagen y se vea bien */
+.carousel-control-prev{
+	left: -60px;
+}
+
+/* Saca el botón siguiente para que esté fuera de la imagen y se vea bien */
+.carousel-control-next{
+	right: -60px;
+}
+
+/* Efecto al pasar el ratón */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 1);
+	opacity: 1;
+}
+
+/* estilo para encabezados de segundo nivel */
+h1 {
+	font-size: 3rem;
+	color: var(--color-corporativo-azul-marino);
+	font-weight: 800;
+	text-align: center;
+}
+/* Atributos generales*/
+body{
+	font-family: "Open Sans", sans-serif;	
+	line-height: 1.6;
+	color: var(--color-texto);
+	background-color: rgb(244,244,244);	
+}
+
+.card img{	
+	/* Fuerzo a que los logos de los cursos tengan todos el mismo tamaño y no se deformen*/
+	display: block;
+	margin: 0 auto;
+	/* Fuerzo a que los logos de los cursos tengan todos el mismo tamaño*/
+	width: 100%;
+	max-width: 338px;	
+	aspect-ratio: 3/2;
+	object-fit: cover;
+	object-position: center;	
+}
+
+/* Encabezado y Navegación */
+header {	
+	font-size: 1.25rem;
+	font-weight: 600;		
+}
+
+/* Atributos para el logo tipo banner */
+header img{
+	 /* Centro la imagen centrada con los atributos display y margin siguientes */
+    display: block;
+	margin: 0 auto;
+	/* fuerza que la imagen sea más ancha que alta */
+	max-width: 100%; 
+	min-width: 200px;	
+	max-height: 200px;
+    object-fit: contain;  
+	aspect-ratio:  2.75; /* la imagen es 2,75 veces más ancha que alta */	
+}
+
+
+/* estilo para encabezados de segundo nivel */
+h2 {
+	font-size: 1.7rem;
+	color: var(--color-corporativo-azul-marino);
+	font-weight: 800;
+	text-align: center;
+}
+
+/* estilo para encabezados de tercer nivel */
+h3{
+	font-size: 1.5rem;
+	color: var(--color-corporativo-azul-marino);
+	font-weight: 600;
+	padding-bottom: 15px;	
+}
+
+p{
+	padding-left: 20px; /* en los párrafos se deja un espacio interno dentro de la caja que lo contiene */
+}
+
+@media print {
+    /* 1. Ocultamos el header completo y el botón de imprimir si se imprime la página*/
+    header, .btn{
+        display: none !important;
+    }
+}
