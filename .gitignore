@@ -1,0 +1,93 @@
+# =========================
+
+# Node.js dependencies
+
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+
+# Environment variables
+
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+
+# Logs
+
+# =========================
+
+logs/
+*.log
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# IDE / Editor
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# Coverage / testing
+
+# =========================
+
+coverage/
+
+# =========================
+
+# Temporary files
+
+# =========================
+
+tmp/
+temp/
+
+# =========================
+
+# Build outputs
+
+# =========================
+
+dist/
+build/
+
+# =========================
+
+# MongoDB local data (si alguien usa Mongo local)
+
+# =========================
+
+data/
+dump/
+
+# =========================
+
+# Admin scripts temporales
+
+# =========================
+
+*.seed.js
+*.backup.json
