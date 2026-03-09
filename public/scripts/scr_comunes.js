@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	
+    cargarMenuCursos();
+    
 	// Código que gestiona los botones del menú de navegación que aumentan o disminuyen el tamaño de la fuente
 	var tamFuente = 1; // Tamaño base de la fuente en unidades em	
 	$("#btn-aumentar").on("click", function(event){		
@@ -47,6 +49,29 @@ $(document).ready(function(){
     // Configurar para que se repita cada 1000 milisegundos (1 segundo)
     setInterval(actualizaHora, 1000);	
 });
+
+function cargarMenuCursos() {
+    const $menu = $("#menu_cursos");
+
+    if ($menu.length === 0) return; // Si la página no tiene ese menú, no hace nada
+
+    $.getJSON("/api/cursos", function (cursos) {
+        $menu.empty();
+
+        cursos.forEach(function (curso) {
+            const item = `
+                <li>
+                    <a class="dropdown-item text-white" href="/curso_detalle.html?id=${curso._id}">
+                        ${curso.titulo}
+                    </a>
+                </li>
+            `;
+            $menu.append(item);
+        });
+    }).fail(function () {
+        $menu.html('<li><span class="dropdown-item-text text-white">No se pudieron cargar los cursos</span></li>');
+    });
+}
 
 
 

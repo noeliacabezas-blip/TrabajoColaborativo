@@ -16,9 +16,9 @@ async function cargaProfesores() {
 		console.log('Se han cargado datos de ${datos_profesores.length} profesores');
 	
 		mongoose.connection.close();
-	}cath (err){
+	} catch (err){
 		console.error("Error:", err);
 	}
 }
 
-cargarProfesores();
+cargaProfesores();

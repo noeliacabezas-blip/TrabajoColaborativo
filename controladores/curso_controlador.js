@@ -17,4 +17,21 @@ exports.obtenerCursos = async (req, res) => {
 		console.error("DETALLE DEL ERROR:", error); // <-- ESTO ES CLAVE
         res.status(500).json({ mensaje: "Error al obtener cursos" });
     }
+
+   
+};
+
+exports.obtenerCursoPorId = async (req, res) => {
+try {
+    const curso = await Curso.findById(req.params.id).populate('profesorId');
+
+    if (!curso) {
+        return res.status(404).json({ mensaje: "Curso no encontrado" });
+    }
+
+    res.status(200).json(curso);
+} catch (error) {
+    console.error("DETALLE DEL ERROR:", error);
+    res.status(500).json({ mensaje: "Error al obtener el curso" });
+}
 };

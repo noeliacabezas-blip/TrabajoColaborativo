@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 //Importar rutas:
 const ruta_usuario = require('./rutas/usuario_rutas');
 const ruta_curso = require('./rutas/curso_rutas');
+const ruta_comentario = require("./rutas/comentario_rutas");
+
 
 const app = express();
 
@@ -39,6 +41,7 @@ app.use(express.static('public')); // Sirve el HTML, CSS y JS de la UD4
 //app.use('/api/auth', require('./rutas/usuario_rutas'));
 app.use('/api/usuario', ruta_usuario);
 app.use('/api/cursos', ruta_curso);
+app.use("/api/comentarios", ruta_comentario);
 
 // Ruta de prueba
 app.get('/', (req, res) => {

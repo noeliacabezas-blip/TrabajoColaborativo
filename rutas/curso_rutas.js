@@ -3,5 +3,6 @@ const ruta_curso = express.Router();
 const controlador_curso = require('../controladores/curso_controlador');
 
 ruta_curso.get('/', controlador_curso.obtenerCursos);
+ruta_curso.get('/:id', controlador_curso.obtenerCursoPorId);
 
 module.exports = ruta_curso;
