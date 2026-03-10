@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<%-include('parciales/head') %>
+</head>
+
+<body>
+	<header class="sticky-top bg-white border-bottom">
+		<%-include('parciales/header') %>		
+	</header>
+	<main>
+		<section id="curso_detalle">
+			<div class="card mx-auto d-block fondo_corporativo_azul_claro mt-3" style="width: 80%">
+				<img id="curso-imagen" src="" class="card-img-top mt-4" alt="" title="">
+				<div class="card-body">
+					<h2 id="curso-titulo" class="card-title"></h2>
+					<h3 id="curso-subtitulo" class="card-text text-center"></h3>
+				</div>
+
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item fondo_corporativo_azul_claro">
+						<span class="fw-bold">Categoría:</span> <span id="curso-categoria"></span>
+					</li>
+					<li class="list-group-item fondo_corporativo_azul_claro">
+						<span class="fw-bold">Nivel:</span> <span id="curso-nivel"></span>
+					</li>
+					<li class="list-group-item fondo_corporativo_azul_claro">
+						<span class="fw-bold">Duración:</span> <span id="curso-duracion"></span>
+					</li>
+					<li class="list-group-item fondo_corporativo_azul_claro">
+						<span class="fw-bold">Profesor responsable:</span> <span id="curso-profesor"></span>
+					</li>
+					<li class="list-group-item fondo_corporativo_azul_claro">
+						<span class="fw-bold">Especialidad:</span> <span id="curso-especialidad"></span>
+					</li>
+				</ul>
+
+				<div class="card-body">
+					<p class="card-text px-1 fw-bold">Descripción:</p>
+					<div id="curso-descripcion"></div>
+
+					<p class="card-text px-1 fw-bold mt-4">Temario:</p>
+					<ul id="curso-temario"></ul>
+
+					<span class="btn btn-primary btn-imprimir">Imprimir</span>
+				</div>
+			</div>
+		</section>
+		<section class="container mt-4 mb-5">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<h2 class="mb-3">Comentarios del curso</h2>
+
+					<div id="estado-comentarios" class="mb-3"></div>
+
+					<div id="bloque-formulario-comentario" class="mb-4" style="display:none;">
+						<form id="form-comentario">
+							<div class="mb-3">
+								<label for="puntuacion" class="form-label">Puntuación</label>
+								<select id="puntuacion" class="form-select" required>
+									<option value="">Selecciona una puntuación</option>
+									<option value="5">5 - Excelente</option>
+									<option value="4">4 - Muy bueno</option>
+									<option value="3">3 - Bien</option>
+									<option value="2">2 - Regular</option>
+									<option value="1">1 - Mejorable</option>
+								</select>
+							</div>
+
+							<div class="mb-3">
+								<label for="texto-comentario" class="form-label">Tu comentario</label>
+								<textarea id="texto-comentario" class="form-control" rows="4" required></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-primary">Publicar comentario</button>
+						</form>
+					</div>
+
+					<div id="lista-comentarios"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- Pie de página -->
+	<footer class="fondo_corporativo_azul_marino text-white py-2 mt-2">
+		<%-include('parciales/footer') %>
+	</footer>
+	<%-include('parciales/modales_scripts') %>
+	<script src="scripts/scr_curso_detalle.js"></script>
+</body>
+
+</html>

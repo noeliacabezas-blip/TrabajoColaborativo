@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>		
+		<%-include('parciales/head') %>		
+	</head>	
+	<body>
+		<header class="sticky-top bg-white border-bottom">
+			<%-include('parciales/header') %>
+		</header>
+		<main>
+			<h1>Catálogo de cursos</h1>
+			<p class="text-center">Aquí puedes consultar nuestra oferta actual de cursos disponibles, esperamos que se adapten a tus necesidades.</p>
+			<div class="container-fluid mt-2 px-4">					
+				<!-- Panel de Filtros -->
+				<div class="row g-3 mb-4 p-3 ">					
+					<div class="col-md-5">
+						<input type="text" id="buscar" class="form-control" placeholder="Buscar curso...">
+					</div>
+					<div class="col-md-4">
+						<select id="filtroCategoria" class="form-select">
+							<option value="">Todas las categorías</option>
+							<option value="Tecnología">Tecnología</option>								
+							<option value="Empresa">Empresa</option>
+							<option value="Diseño">Diseño</option>
+							<option value="Idiomas">Idiomas</option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<button id="btnLimpiar" class="btn btn-primary w-100">Limpiar filtros</button>
+					</div>
+				</div>					
+			</div>
+			<div id="contenedorCursos" class="row g-4 mb-5 mx-5">
+			<!-- Aquí irán las Cards de los cursos que se crearán con JavaScript-->
+			</div>			
+		</main>
+		<!-- Pie de página -->
+		<footer class="fondo_corporativo_azul_marino text-white py-2 mt-2">
+			<%-include('parciales/footer') %>	
+		</footer>
+		<%-include('parciales/modales_scripts') %>	
+		<script src="./scripts/scr_listado_cursos.js"></script>	
+	</body>
+</html>

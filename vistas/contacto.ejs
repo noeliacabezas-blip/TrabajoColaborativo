@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>		
+		<%-include('parciales/head') %>	
+	</head>
+	<body>
+		<header class="sticky-top bg-white border-bottom">
+			<%-include('parciales/header') %>
+		</header>
+		<main>
+			<!-- Sección 1 -->
+			<h1>Formulario de contacto</h1>
+			<p class="text-center">Estamos encantados de poder atender a vuestras consultas, ponemos a su disposición el siguiente formulario de contacto:</p>
+			<div class="container border rounded fondo_corporativo_azul_claro" style="width: 80%">
+				<form id="formulario_contacto">
+					<div class="row g-4">
+						<div class="mb-3 p-3 col-lg-6 col-12">
+							<label for="nombre" class="form-label">Nombre</label>
+							<input class="form-control" id="nombre" type="text" aria-describedby="nombre_ayuda">
+							<div id="nombre_ayuda" class="form-text text-danger" style="display: none;">Por favor, es necesario introducir su nombre</div>
+						</div>
+						<div class="mb-3 p-3 col-lg-6 col-12">
+							<label for="correo" class="form-label">Correo eléctronico</label>
+							<input type="email" class="form-control" id="correo" aria-describedby="correo_ayuda">
+							<div id="correo_ayuda" class="form-text text-danger" style="display: none;">Por favor, introduzca su correo electrónico</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="asunto" class="form-label">Asunto</label>
+						<input class="form-control" id="asunto" type="text" aria-describedby="asunto_ayuda">
+						<div id="asunto_ayuda" class="form-text text-danger" style="display: none;">Por favor, indique el asunto de la consulta</div>
+					</div>
+					<div class="mb-3">
+						<label for="mensaje" class="form-label">Mensaje</label>
+						<textarea class="form-control" id="mensaje" rows="10" aria-describedby="mensaje_ayuda mensaje_info"></textarea>
+						<div id="mensaje_info" class="form-text"><span id="contador">0</span> caracteres - mínimo 300</div>
+						<div id="mensaje_ayuda" class="form-text text-danger" style="display: none;">Para que el mensaje sea válido debe tener un mínimo de 300 caracteres</div>
+					</div>
+					<button type="submit" class="btn btn-primary mb-3">Enviar</button>
+				</form>
+			</div>			
+		</main>
+		<!-- Pie de página -->
+		<footer class="fondo_corporativo_azul_marino text-white py-2 mt-2">
+			<%-include('parciales/footer') %>			
+		</footer>
+		<%-include('parciales/modales_scripts') %>
+		<script src="scripts/scr_contacto.js"></script>
+	</body>
+</html>

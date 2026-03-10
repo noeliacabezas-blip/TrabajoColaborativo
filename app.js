@@ -9,7 +9,19 @@ const ruta_curso = require('./rutas/curso_rutas');
 const ruta_comentario = require("./rutas/comentario_rutas");
 
 
+//const expressLayouts = require('express-ejs-layouts');
 const app = express();
+const path = require ('path');
+
+// Configuración de vistas:
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, 'vistas'));
+
+// Middleware de archivos estáticos:
+//app.use(expressLayouts);
+//app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Para que funcione la conexión a MongoDB Atlas:
 const dns = require('node:dns');
@@ -37,16 +49,18 @@ app.use(sesion({
 	}
 }));
 
-app.use(express.static('public')); // Sirve el HTML, CSS y JS de la UD4
+//app.use(express.static('public')); // Sirve el HTML, CSS y JS de la UD4
 //app.use('/api/auth', require('./rutas/usuario_rutas'));
+const ruta_pagina = require("./rutas/pagina_rutas");
+app.use('/', ruta_pagina);
 app.use('/api/usuario', ruta_usuario);
 app.use('/api/cursos', ruta_curso);
 app.use("/api/comentarios", ruta_comentario);
 
 // Ruta de prueba
-app.get('/', (req, res) => {
-    res.send('Servidor funcionando y conectado a la base de datos');
-});
+//  app.get('/', (req, res) => {
+ //   res.send('Servidor funcionando y conectado a la base de datos');
+//});
 
 // Levantar el servidor
 const PORT = process.env.PORT || 3000;

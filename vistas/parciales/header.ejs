@@ -1,0 +1,49 @@
+<!-- vistas/parciales/header.ejs -->
+			<!-- Encabezado corporativo del sitio web -->
+			<div>	
+				<figure>
+					<img src="img/logo_2.jpg" alt="Logo de Formación Global Online">
+				</figure>				
+			</div>	
+			
+			<nav class="navbar navbar-expand-lg navbar-dark fondo_corporativo_azul_marino">
+				<div class="container-fluid">     
+					<!-- Crea un botón de tres rayas horizontales para el diseño responsible si la pantalla es más pequeña, si pulsas se despliega el menú -->
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- Elementos del menú -->
+					<div class="collapse navbar-collapse" id="menuNavegacion">
+						<ul class="navbar-nav me-auto">
+							<li class="nav-item"><a class="nav-link text-white" href="/">Portada</a></li>
+							<li class="nav-item"><a class="nav-link text-white" href="/listado_cursos">Catálogo de Cursos</a></li>
+							<li class="nav-item"><a class="nav-link text-white" href="/profesores">Profesores</a></li>
+							<!-- Desplegable de cursos individuales -->
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+								Cursos disponibles
+							</a>
+								<ul class="dropdown-menu dropdown-menu-dark fondo_corporativo_azul_marino" id="menu_cursos">
+									<!-- Se rellena dinámicamente -->
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link text-white" href="contacto">Contacto</a></li>
+							<li id="usuario_admin" class="d-none nav-item"><a class="nav-link text-white" href="admin">Admin</a></li>							
+						</ul>                
+						<!-- Botones tamaño de texto -->
+						<div class="d-flex">
+							<!-- si no ha iniciado sesión -->
+							<div id="usuario_invitado" class="d-flex">
+								<button type="button" class="btn btn-outline-light ms-2 me-2" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</button>
+							</div>							
+							<!-- si el usuario ha iniciado sesión -->
+							 <div id="usuario_logueado" class="d-none d-flex">
+								<span id="nombre_usuario" class="me-3 fw-bold text-white"></span>
+								<button id="boton_logout" type="button" class="btn btn-outline-light ms-2 me-2">Cerrar Sesión</button>
+							 </div> 
+							<button id="btn-aumentar" class="btn btn-outline-light btn-sm me-2">A+</button>
+							<button id="btn-disminuir" class="btn btn-outline-light btn-sm">A-</button>
+						</div>
+					</div>
+				</div>
+			</nav>
