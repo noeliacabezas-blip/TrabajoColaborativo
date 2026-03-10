@@ -92,50 +92,16 @@
 				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
 			  </div>
 			  <div class="modal-body">
-				<!-- Pestañas para elegir entre Login o Registro -->
-  				<ul class="nav nav-tabs mb-3" id="authTabs" role="tablist">
-    				<li class="nav-item">
-      					<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabLogin">Acceder</button>
-    				</li>
-    				<li class="nav-item">
-     					 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabRegistro">Registrarse</button>
-    				</li>
-  				</ul>
-				<div class="tab-content">
-					<!-- Formulario de login -->
-					 <div class="tab-pane fade show active" id="tabLogin">
-						<form id="formulario_login">
-				  			<div class="mb-3">
-								<label for="usuario" class="form-label">Correo electrónico</label>
-								<input type="email" class="form-control" id="usuario" placeholder="ejemplo@correo.com" required>
-				  			</div>
-				  			<div class="mb-3">
-								<label for="password" class="form-label">Contraseña</label>
-								<input type="password" class="form-control" id="password" required>
-				  			</div>
-				  			<button type="submit" class="btn btn-primary w-100">Acceder</button>
-						</form>
-					 </div>
-					 <!-- Formulario de registro -->
-					  <div class="tab-pane fade" id="tabRegistro">
-      					<form id="formulario_registro">
-        					<div class="mb-3">
-          						<label class="form-label">Nombre completo</label>
-          						<input type="text" class="form-control" id="reg_nombre" required>
-        					</div>
-        					<div class="mb-3">
-          						<label class="form-label">Correo electrónico</label>
-          						<input type="email" class="form-control" id="reg_email" required>
-       						</div>
-        					<div class="mb-3">
-          						<label class="form-label">Contraseña</label>
-          						<input type="password" class="form-control" id="reg_password" required>
-        					</div>
-        					<button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
-     					 </form>
-    				</div>
-				</div>
-				
+				<form id="formulario_login">
+				  <div class="mb-3">
+					<label for="usuario" class="form-label">Correo electrónico</label>
+					<input type="email" class="form-control" id="usuario" placeholder="ejemplo@correo.com" required>
+				  </div>
+				  <div class="mb-3">
+					<label for="password" class="form-label">Contraseña</label>
+					<input type="password" class="form-control" id="password" required>
+				  </div>
+				  <button type="submit" class="boton_acceder btn btn-primary w-100">Acceder</button>				 
 			  </div>
 			</div>
 		  </div>

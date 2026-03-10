@@ -27,11 +27,20 @@
 									<!-- Se rellena dinámicamente -->
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link text-white" href="contacto">Contacto</a></li>							
+							<li class="nav-item"><a class="nav-link text-white" href="contacto">Contacto</a></li>
+							<li id="usuario_admin" class="d-none nav-item"><a class="nav-link text-white" href="admin">Admin</a></li>							
 						</ul>                
 						<!-- Botones tamaño de texto -->
-						<div class="d-flex">							
-							<button type="button" class="btn btn-outline-light ms-2 me-2" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</button>
+						<div class="d-flex">
+							<!-- si no ha iniciado sesión -->
+							<div id="usuario_invitado" class="d-flex">
+								<button type="button" class="btn btn-outline-light ms-2 me-2" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</button>
+							</div>							
+							<!-- si el usuario ha iniciado sesión -->
+							 <div id="usuario_logueado" class="d-none d-flex">
+								<span id="nombre_usuario" class="me-3 fw-bold text-white"></span>
+								<button id="boton_logout" type="button" class="btn btn-outline-light ms-2 me-2">Cerrar Sesión</button>
+							 </div> 
 							<button id="btn-aumentar" class="btn btn-outline-light btn-sm me-2">A+</button>
 							<button id="btn-disminuir" class="btn btn-outline-light btn-sm">A-</button>
 						</div>

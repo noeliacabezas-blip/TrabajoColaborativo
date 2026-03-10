@@ -17,9 +17,10 @@ exports.registrar = async (req, res) => {
             passwordHash, 
             rol: rol || 'alumno' 
         });
-        await nuevoUsuario.save();
+        await nuevoUsuario.save();      
 
-        res.status(201).json({ mensaje: "Usuario creado con éxito" });
+       
+        res.status(201).json({ mensaje: "Usuario creado con éxito."});
     } catch (error) {
         res.status(500).json({ mensaje: "Error al registrar", error: error.message });
     }
