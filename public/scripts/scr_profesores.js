@@ -1,72 +1,105 @@
-$(document).ready(function(){
-	var lista_profesores = [
-	{nombre: "José Álvarez Álvarez", especializacion: "Tecnología", experiencia: 9, n_cursos: 3, requisitos: "Sin requisitos"},
-	{nombre: "María García García", especializacion: "Empresa", experiencia: 15, n_cursos: 2, requisitos: "Sin requisitos"},
-	{nombre: "Teresa Alonso Alonso", especializacion: "Diseño", experiencia: 6, n_cursos: 2, requisitos: "Sin requisitos"},
-	{nombre: "Jesús Castro Castro", especializacion: "Idioma", experiencia: 7, n_cursos: 2, requisitos: "Sin requisitos"},
-	{nombre: "Ana Blanco Blanco", especializacion: "Tecnología", experiencia: 3, n_cursos: 1, requisitos: "Sin requisitos"},
-	{nombre: "Ana Rodriguez Fernández", especializacion: "Diseño", experiencia: 12, n_cursos: 4, requisitos: "Sin requisitos"}
-	];
-	
-	var ordenNombre = false; //No están ordenados alfabéticamente -> en un inicio están según los lee del array
-	var ordenExperiencia = false;
-	var ordenN_cursos = false;
-	
-	function dibujar_tabla(){
-		$("#tabla-profesores").empty();		
-		lista_profesores.forEach(function(profesor){
-			var fila ='<tr>' +
-					'<td>' + profesor.nombre + '</td>' +
-					'<td>' + profesor.especializacion + '</td>' +
-					'<td>' + profesor.experiencia + '</td>' +
-					'<td>' + profesor.n_cursos + '</td>' +
-					'<td>' + profesor.requisitos + '</td>' +
-				'</tr>';			
-			$("#tabla-profesores").append(fila);
-		});
-	}
-	
-	function ordenarNombre(){
-		// Si estaba ordenado alfabéticamente:
-		if (ordenNombre){
-			lista_profesores.sort((a,b) => b.nombre.localeCompare(a.nombre)); //orden inverso al alfabético
-			ordenNombre=false;
-		}else { // Si no estaba ordenado alfabéticamente:
-			lista_profesores.sort((a,b) => a.nombre.localeCompare(b.nombre)); //orden alfabético
-			ordenNombre=true;
-		}
-		ordenExperiencia=false;
-		ordenN_cursos=false;
-		dibujar_tabla();
-	}
-	
-	function ordenarExperiencia(){
-		if(ordenExperiencia){
-			lista_profesores.sort((a,b) => b.experiencia - a.experiencia); //orden de mayor a menor experiencia
-			ordenExperiencia=false;
-		}else{
-			lista_profesores.sort((a,b) => a.experiencia - b.experiencia); //orden de menor a mayor experiencia
-			ordenExperiencia=true;
-		}
-		ordenNombre=false;
-		ordenN_cursos=false;
-		dibujar_tabla();
-	}
-	
-	function ordenarN_cursos(){
-		if(ordenN_cursos){
-			lista_profesores.sort((a,b) => b.n_cursos - a.n_cursos); //orden de mayor a menor número de cursos
-			ordenN_cursos=false;
-		}else{
-			lista_profesores.sort((a,b) => a.n_cursos - b.n_cursos); //orden de menor a mayor número de cursos
-			ordenN_cursos=true;
-		}
-		ordenNombre=false;
-		ordenExperiencia=false;
-		dibujar_tabla();
-	}
-	$(".nombre").on("click", ordenarNombre);
-	$(".experiencia").on("click", ordenarExperiencia);
-	$(".n_cursos").on("click", ordenarN_cursos);
-	dibujar_tabla();
+$(document).ready(function () {
+    let profesores = [];
+    let orden = {
+        nombreAsc: true,
+        experienciaAsc: true,
+        cursosAsc: true
+    };
+
+    cargarProfesores();
+
+    function cargarProfesores() {
+        $.getJSON("/api/profesores", function (datos) {
+            profesores = datos;
+            renderizarTabla(profesores);
+        }).fail(function () {
+            $("#tabla-profesores").html(`
+                <tr>
+                    <td colspan="5" class="text-danger fw-bold">
+                        No se pudieron cargar los profesores.
+                    </td>
+                </tr>
+            `);
+        });
+    }
+
+    function renderizarTabla(listaProfesores) {
+        const $tabla = $("#tabla-profesores");
+        $tabla.empty();
+
+        if (!listaProfesores || listaProfesores.length === 0) {
+            $tabla.html(`
+                <tr>
+                    <td colspan="5" class="text-muted">
+                        No hay profesores disponibles.
+                    </td>
+                </tr>
+            `);
+            return;
+        }
+
+        listaProfesores.forEach(function (profesor) {
+            const fila = `
+                <tr>
+                    <td>${profesor.nombre ?? ""}</td>
+                    <td>${profesor.especialidad ?? ""}</td>
+                    <td>${profesor.experiencia ?? "-"}</td>
+                    <td>${profesor.nCursos ?? 0}</td>
+                    <td>${profesor.requisitosAdicionales ?? "-"}</td>
+                </tr>
+            `;
+            $tabla.append(fila);
+        });
+    }
+
+	function ordernarPorNombre() {
+        profesores.sort(function (a, b) {
+            const nombreA = (a.nombre || "").toLowerCase();
+            const nombreB = (b.nombre || "").toLowerCase();
+
+            if (orden.nombreAsc) {
+                return nombreA.localeCompare(nombreB);
+            }
+            return nombreB.localeCompare(nombreA);
+        });
+
+        orden.nombreAsc = !orden.nombreAsc;
+        renderizarTabla(profesores);
+    }
+
+	function ordenarPorExperiencia() {
+        profesores.sort(function (a, b) {
+            const expA = a.experiencia ?? 0;
+            const expB = b.experiencia ?? 0;
+
+            if (orden.experienciaAsc) {
+                return expA - expB;
+            }
+            return expB - expA;
+        });
+
+        orden.experienciaAsc = !orden.experienciaAsc;
+        renderizarTabla(profesores);
+    }
+
+	function ordernarPorCurso() {
+        profesores.sort(function (a, b) {
+            const cursosA = a.nCursos ?? 0;
+            const cursosB = b.nCursos ?? 0;
+
+            if (orden.cursosAsc) {
+                return cursosA - cursosB;
+            }
+            return cursosB - cursosA;
+        });
+
+        orden.cursosAsc = !orden.cursosAsc;
+        renderizarTabla(profesores);
+    }
+
+    $("th.nombre").on("click", ordernarPorNombre);
+
+    $("th.experiencia").on("click", ordenarPorExperiencia);
+
+    $("th.n_cursos").on("click",ordernarPorCurso);
 });

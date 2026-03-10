@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const ruta_usuario = require('./rutas/usuario_rutas');
 const ruta_curso = require('./rutas/curso_rutas');
 const ruta_comentario = require("./rutas/comentario_rutas");
+const profesorRutas = require("./rutas/profesor_rutas");
 
 
 //const expressLayouts = require('express-ejs-layouts');
@@ -56,6 +57,7 @@ app.use('/', ruta_pagina);
 app.use('/api/usuario', ruta_usuario);
 app.use('/api/cursos', ruta_curso);
 app.use("/api/comentarios", ruta_comentario);
+app.use("/api/profesores", profesorRutas);
 
 // Ruta de prueba
 //  app.get('/', (req, res) => {
