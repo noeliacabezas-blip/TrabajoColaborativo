@@ -27,7 +27,7 @@ $(document).ready(function(){
 		
         $.each(cursos, function(id, curso){  			
             $("#menu_cursos").append(
-				'<li><a class="dropdown-item text-white" href="curso_detalle.html?id=' + curso._id + '">' + curso.titulo + '</a></li>'
+				'<li><a class="dropdown-item text-white" href="curso_detalle?id=' + curso._id + '">' + curso.titulo + '</a></li>'
             );
         });
     });
@@ -61,7 +61,7 @@ function cargarMenuCursos() {
         cursos.forEach(function (curso) {
             const item = `
                 <li>
-                    <a class="dropdown-item text-white" href="/curso_detalle.html?id=${curso._id}">
+                    <a class="dropdown-item text-white" href="/curso_detalle?id=${curso._id}">
                         ${curso.titulo}
                     </a>
                 </li>

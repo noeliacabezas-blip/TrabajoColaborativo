@@ -28,7 +28,7 @@ $(document).ready(function(){
                                 '<p class="card-text"><span class="fw-bold">Nivel:</span> ' + curso.nivel + '</p>' +
                                 // Mostramos el nombre del profesor gracias al .populate() del backend
                                 '<p class="card-text"><span class="fw-bold">Profesor:</span> ' + (curso.profesorId ? curso.profesorId.nombre : "N/A") + '</p>' +
-                                '<a href="/curso_detalle.html?id=' + curso._id + '" class="btn btn-primary">Ver detalles del curso</a>' +
+                                '<a href="/curso_detalle?id=' + curso._id + '" class="btn btn-primary">Ver detalles del curso</a>' +
                             '</div>' +
                         '</div>' + 
                     '</div>'
