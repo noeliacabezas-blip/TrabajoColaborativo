@@ -8,8 +8,9 @@ const ruta_usuario = require('./rutas/usuario_rutas');
 const ruta_curso = require('./rutas/curso_rutas');
 const ruta_comentario = require("./rutas/comentario_rutas");
 
-
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
+app.use(expressLayouts);
 
 // Para que funcione la conexión a MongoDB Atlas:
 const dns = require('node:dns');
