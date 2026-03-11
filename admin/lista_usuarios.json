@@ -1,0 +1,8 @@
+[
+	{
+		"nombre": "ADMIN",
+		"email": "admin@formacionglobalonline.es", 
+        "passwordHash": "Temporal123",         
+		"rol": "admin"
+	}
+]

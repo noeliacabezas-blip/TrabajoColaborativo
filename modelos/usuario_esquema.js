@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const esquema_usuario = new mongoose.Schema({
     nombre: String, 
     email: { 
-        type: String, 
+        type: String,
+        unique: true, 
         validate: {	//https://codemia.io/knowledge-hub/path/mongoose_-_validate_email_syntax
             validator: function(v) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);

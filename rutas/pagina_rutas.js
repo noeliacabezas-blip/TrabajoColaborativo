@@ -1,6 +1,7 @@
 const express = require('express');
 const ruta_paginas = express.Router();
 const Curso = require('../modelos/curso_esquema');
+const { esAdmin } = require('../middleware/usuarios_middelware')
 
 ruta_paginas.get('/', (req, res) => {
 	res.render('index', { title: 'Formación Global Online | Portada' });
@@ -33,6 +34,10 @@ ruta_paginas.get('/curso_detalle', async (req, res) => {
     } catch (error) {
         res.status(500).send("Error al cargar el curso");
     }
+});
+
+ruta_paginas.get('/admin', esAdmin, (req, res) => {
+	res.render('admin', { title: 'Formación Global Online | ADMIN' });
 });
 
 module.exports = ruta_paginas;
