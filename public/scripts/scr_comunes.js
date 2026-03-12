@@ -77,6 +77,9 @@ $(document).ready(function(){
                     nombre: respuesta.nombre,
                     rol: respuesta.rol
                 });
+                
+                //window.location.reload();
+                $(document).trigger("usuarioLogueado");
 
                 // si es un admin -> le lleva a su panel
                 if (respuesta.rol === 'admin') {
@@ -110,8 +113,7 @@ $(document).ready(function(){
             contentType: 'application/json',
             data: JSON.stringify(datosRegistro),
             success: function(respuesta) {
-                window.alert(respuesta.mensaje);
-
+                window.alert(respuesta.mensaje);                
                 $("#formulario_registro")[0].reset(); // Limpia el formulario
 
                 // Cambia a la pestaña de login automáticamente
@@ -134,12 +136,14 @@ $(document).ready(function(){
             type: 'GET',
             success: function(respuesta) {
                 window.alert(respuesta.mensaje || "Sesión cerrada correctamente");
-
-            // Actualiza el menú para que vuelva a mostrar "Iniciar Sesión"
-            actualiza_estado_sesion_menu({ logueado: false });
+                
+                // Actualiza el menú para que vuelva a mostrar "Iniciar Sesión"
+                actualiza_estado_sesion_menu({ logueado: false });
+                $(document).trigger("usuarioLogueado");
+               // window.location.reload();
             },
-            error: function() {
-                window.alert("Error al intentar cerrar sesión");
+            error: function(fallo) {
+                window.alert("Error al intentar cerrar sesión " + fallo.responseJSON.mensaje);
             }
         });
     });
@@ -173,8 +177,8 @@ function actualiza_estado_sesion_menu (usuario){
         // ocultamos el botón de inicio sesión:
         $("#usuario_invitado").addClass("d-none");
         // mostramos los datos del usuario y botón de logoff
-        $("#usuario_logueado").removeClass("d-none");
-        $("#nombre_usuario").text(usuario.nombre);       
+        $("#nombre_usuario").text(usuario.nombre); 
+        $("#usuario_logueado").removeClass("d-none");             
         if (usuario.rol === 'admin'){
              $("#usuario_admin").removeClass("d-none");
         }
