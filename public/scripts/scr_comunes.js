@@ -80,7 +80,7 @@ $(document).ready(function(){
 
                 // si es un admin -> le lleva a su panel
                 if (respuesta.rol === 'admin') {
-                    window.location.href = "/admin.html"
+                    window.location.href = "/admin"
                 } 
             },
             error: function(fallo){
@@ -174,7 +174,7 @@ function actualiza_estado_sesion_menu (usuario){
         $("#usuario_invitado").addClass("d-none");
         // mostramos los datos del usuario y botón de logoff
         $("#usuario_logueado").removeClass("d-none");
-        $("#nombre_usuario").text(usuario.nombre);
+        $("#nombre_usuario").text(usuario.nombre);       
         if (usuario.rol === 'admin'){
              $("#usuario_admin").removeClass("d-none");
         }

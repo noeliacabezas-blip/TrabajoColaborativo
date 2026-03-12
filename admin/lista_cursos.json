@@ -7,7 +7,14 @@
 		"descripcion": "Con el Curso online de Hacking Ético podrás aplicar las perspectivas del atacante, identificando, evaluando y reduciendo los riesgos potenciales para los sistemas.\nDespliega estrategias que optimicen la seguridad dentro del marco ético y legal.",
 		"imagen": "./img/curso_1_logo.jpg",    
 		"emailProfesor": "jalvarez@formacionglobalonline.es",
-		"temario": "TEST_1"	
+		"temario": [
+			"Módulo 1. Hacking ético e Ingeniería Social",
+			"Módulo 2. Footprinting y scanning de redes",
+			"Módulo 3. Amenazas de malware",
+			"Módulo 4. Denial of Service y Cloud computing",
+			"Módulo 5. Hacking de aplicaciones, redes y plataformas móviles",
+			"Módulo 6. Criptografía"
+		]
 	},
 	{
 		"titulo": "Curso de Gestión de Empresas",
@@ -17,7 +24,15 @@
 		"descripcion": "Lidera la gestión operativa de cualquier negocio, a través de la planificación empresarial, el marketing y las fuentes de financiación que lo hagan viable.\nEsta formación será tu aliada para darle alas a tu ambición como directivo, empresario o emprendedor y encabezar tus proyectos",
 		"imagen": "./img/curso_2_logo.jpg",    
 		"emailProfesor": "mgarcia@formacionglobalonline.es",
-		"temario": "TEST_2"	
+		"temario": [
+			"Módulo 1. Creación de empresas",
+			"Módulo 2. Management y liderazgo",
+			"Módulo 3. Gestión de RRHH",
+			"Módulo 4. Dirección de marketing",
+			"Módulo 5. Dirección comercial y ventas",
+			"Módulo 6. Gestión financiera y contable",
+			"Módulo 7. Operaciones y logística"
+		]
 	},
 	{
 		"titulo": "Curso de Diseño Industrial",
@@ -27,7 +42,15 @@
 		"descripcion": "Con este curso te preparas para tener bajo control todas las fases del proceso de elaboración de producto, desde los primeros bocetos hasta la selección de los materiales o su ergonomía para su producción.\nPrepárate con un completo temario, masterclasses, videoconferencias, videotutoriales, prácticas y un seguimiento personalizado que te permitirá avanzar a tu propio ritmo.",
 		"imagen": "./img/curso_3_logo.jpg",    
 		"emailProfesor": "talonso@formacionglobalonline.es",
-		"temario": "TEST_3"	
+		"temario": [
+			"Módulo 1. Fases del diseño (I). De la idea al boceto",
+			"Módulo 2. Dibujo para diseño de productos",
+			"Módulo 3. Fases del diseño (II). El diseño detallado",
+			"Módulo 4. Fundamentos del diseño",
+			"Módulo 5. Materiales aplicados al diseño",
+			"Módulo 6. Procesos industriales para la transformación de los materiales",
+			"Módulo 7. Protectos especializados"
+		]
 	},
 	{
 		"titulo": "Curso Básico de Alemán",
@@ -37,7 +60,13 @@
 		"descripcion": "Este curso de alemán comenzará con la introducción al alfabeto alemán y continuará enseñando gramática, vocabulario y conversación en alemán.\nCon más de 32 capítulos de gramática, este curso también incluye 17 videos animados con cuales puedes aprender de tener conversaciones básicas en alemán así como aprenderás el vocabulario alemán.\nDespués de cada lección, encontrarás un cuestionario y un archivo PDF de tareas para que puedas practicar lo que has acabado de aprender.",
 		"imagen": "./img/curso_4_logo.jpg",    
 		"emailProfesor": "jcastro@formacionglobalonline.es",
-		"temario": "TEST_4"	
+		"temario": [
+			"Módulo 1. Los países de lengua alemana",
+			"Módulo 2. Las relaciones sociales (familia, amigos, entorno laboral)",
+			"Módulo 3. La casa y la ciudad",
+			"Módulo 4. La vida cotidiana",
+			"Módulo 5. Viajes y vacaciones"
+		]	
 	},
 	{
 		"titulo": "Curso de comercio Internacional",
@@ -47,7 +76,15 @@
 		"descripcion": "Con el Curso de Comercio Internacional estarás a la altura de la gestión administrativa de las importaciones, exportaciones, proveedores y almacenaje al nivel de los expertos.\nFórmate con una metodología práctica, liderada por profesionales y avalada por la ACOCEX. ¡Transforma tu futuro!",
 		"imagen": "./img/curso_5_logo.jpg",    
 		"emailProfesor": "mgarcia@formacionglobalonline.es",
-		"temario": "TEST_5"
+		"temario": [
+			"Módulo 1. Fundamentos para la internacionalización de la empresa",
+			"Módulo 2. Marketing internacional",
+			"Módulo 3. Marco legal, contratación y negociación internacional",
+			"Módulo 4. Financiación internacional",
+			"Módulo 5. Logística de almacenamiento",
+			"Módulo 6. Transporte de mercancías",
+			"Módulo 7. Fiscalidad internacional"
+		]
 	},
 	{
 		"titulo": "Curso Básico de Alemán II",
@@ -57,7 +94,14 @@
 		"descripcion": "Después de completar este curso, habrás aprendido toda la gramática A2 del idioma alemán.\nAprenderás modismos alemanes para sonar mas como un nativo.\nAprenderás cosas interesantes sobre la cultura alemana.",
 		"imagen": "./img/curso_6_logo.jpg",    
 		"emailProfesor": "jcastro@formacionglobalonline.es",
-		"temario": "TEST_6"	
+		"temario": [
+			"Módulo 1. De compras; el supermercado",
+			"Módulo 2. Mi entorno profesional",
+			"Módulo 3. En el restaurante o en la cafetería",
+			"Módulo 4. La rutina diaria",
+			"Módulo 5. Breves formas de comunicación: felicitaciones, faxes, correos electrónicos, llamadas por teléfono, etc",
+			"Módulo 6. Los viajes"
+		]	
 	},
 	{
 		"titulo": "Curso de Excel Avanzado",
@@ -67,7 +111,14 @@
 		"descripcion": "Deja de usar Excel solo como una hoja de cálculo. Con este curso de excel avanzado online aprenderás a dominar las herramientas más potentes de Microsoft para llevar tus datos al siguiente nivel.\nIncluye:\nPower Query para limpiar y transformar información de forma automática.\nPower Pivot para modelar grandes volúmenes de datos con rapidez.\nPower BI para crear paneles interactivos y visualizaciones que facilitan la toma de decisiones.",
 		"imagen": "./img/curso_7_logo.jpg",    
 		"emailProfesor": "ablanco@formacionglobalonline.es",
-		"temario": "TEST_7"	
+		"temario": [
+			"Módulo 1. Análisis de datos en Excel",
+			"Módulo 2. Power Query: Extracción y Transformación de datos",
+			"Módulo 3. Power Pivot: Modelado y análisis de datos",
+			"Módulo 4. Power BI: Conexiones y manejo de datos",
+			"Módulo 5. Power BI: Visualizaciones, analítica y storytelling",
+			"Módulo 6. Power BI: DAX para análisis avanzado"
+		]	
 	},
 	{
 		"titulo": "Curso de Fundamentos de IA",
@@ -77,7 +128,12 @@
 		"descripcion": "La inteligencia artificial ha revolucionado todos los sectores y se ha convertido en una herramienta clave para generar ideas, crear contenido, automatizar tareas y tomar decisiones.\nCon este curso aprendes a utilizar las plataformas de inteligencia artificial más populares y desarrollas tus habilidades en ingeniería y refinamiento de prompts para conseguir los mejores resultados.",
 		"imagen": "./img/curso_8_logo.jpg",    
 		"emailProfesor": "jalvarez@formacionglobalonline.es",
-		"temario": "TEST_8"
+		"temario": [
+			"Módulo 1. Fundamentos de la Inteligencia Artificial",
+			"Módulo 2. Ingeniería de prompts",
+			"Módulo 3. Refinamiento de prompts",
+			"Módulo 4. Ética"
+		]
 	},
 	{
 		"titulo": "Diseñador Web",
@@ -87,6 +143,17 @@
 		"descripcion": "El diseño profesional de páginas web es mucho más que estética: implica combinar creatividad, usabilidad y funcionalidad.\nEste curso te prepara para dominar los lenguajes HTML5 y CSS3, trabajar con la Suite Adobe Creative Cloud y crear sitios web modernos y optimizados para cualquier dispositivo.",
 		"imagen": "./img/curso_9_logo.jpg",    
 		"emailProfesor": "arodriguez@formacionglobalonline.es",
-		"temario": "TEST_9"	
+		"temario": [
+			"Módulo 1. Usabilidad web y experiencia de usuario (UX)",
+			"Módulo 2. Accesibilidad web",
+			"Módulo 3. Diseño de interfaz",
+			"Módulo 4. Introducción al desarrollo web",
+			"Módulo 5. Entornos de desarrollo y HTML",
+			"Módulo 6. Introducción a CSS y DOM",
+			"Módulo 7. JavaScript (I)",
+			"Módulo 8. JavaScript (II)",
+			"Módulo 9. SEO y eficiencia en buscadores",
+			"Módulo 10. Gestores de contenido"
+		]	
 	}
 ]
