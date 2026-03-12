@@ -2,7 +2,7 @@ const Curso = require('../modelos/curso_esquema');
 
 exports.obtenerCursos = async (req, res) => {
     try {
-        const { categoria, titulo } = req.query; // Filtros opcionales
+        const { categoria, titulo, nivel } = req.query; // Filtros opcionales
         let filtro = {};
         if (categoria){
 			filtro.categoria = categoria;
@@ -10,6 +10,9 @@ exports.obtenerCursos = async (req, res) => {
         if (titulo) {
 			filtro.titulo = {$regex: titulo, $options: 'i'}; // 'i' -> para que la búsqueda sea case-insensitive
 		}
+        if (nivel){
+            filtro.nivel = nivel;
+        }
 
         const cursos = await Curso.find(filtro).populate('profesorId');
         res.status(200).json(cursos);

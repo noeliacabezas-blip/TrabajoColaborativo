@@ -4,9 +4,10 @@ $(document).ready(function(){
         // Obtenemos los valores de los inputs para enviarlos como filtros al servidor
         const filtros = {
             categoria: $("#filtroCategoria").val(),
-            titulo: $("#buscar").val()
+            titulo: $("#buscar").val(),
+            nivel: $("#filtroNivel").val()
         };
-
+       
         // Obtenemos los cursos  "../data/lista_cursos.json" por la ruta de la API
         $.getJSON("/api/cursos", filtros, function(cursos){	
             // Limpiamos el contenedor para no duplicar tarjetas
@@ -43,6 +44,7 @@ $(document).ready(function(){
     // 3. Escuchamos cambios en los filtros para recargar desde la BD
     $("#filtroCategoria").on("change", cargarCursosDesdeBD);
 	$("#buscar").on("keyup", cargarCursosDesdeBD);
+    $("#filtroNivel").on("change", cargarCursosDesdeBD);
     
     // Usamos un pequeño retraso al escribir para no saturar la base de datos
     //let temporizador;
@@ -55,6 +57,7 @@ $(document).ready(function(){
     $("#btnLimpiar").on("click", function() {
         $("#buscar").val("");
         $("#filtroCategoria").val("");
+        $("#filtroNivel").val("");
         cargarCursosDesdeBD();
     });
 });
