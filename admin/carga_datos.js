@@ -1,7 +1,9 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 
+const dns = require('dns');
 dns.setDefaultResultOrder('ipv4first');
 require('node:dns/promises').setServers(['1.1.1.1', '8.8.8.8']);
 
@@ -9,6 +11,7 @@ const Curso = require("../modelos/curso_esquema");
 const Profesor = require("../modelos/profesor_esquema");
 
 const MONGO_URI = process.env.MONGO_URI;
+console.log(MONGO_URI + ' --> cadena conexion');
 
 async function cargarDatos() {
   try {
