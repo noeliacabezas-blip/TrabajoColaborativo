@@ -39,11 +39,11 @@ exports.crearComentario = async (req, res) => {
 
         if (textoLimpio.length < 5) {
             return res.status(400).json({ mensaje: "El comentario es demasiado corto" });
-        }
-
+        } 
+        
         const nuevoComentario = new Comentario({
-            usuarioId: req.session.usuario.id,
-            cursoId,
+            usuarioId: req.session.usuarioId,
+            cursoId: cursoId,
             comentario: textoLimpio,
             puntuacion: puntuacionNumero,
             fecha: new Date()

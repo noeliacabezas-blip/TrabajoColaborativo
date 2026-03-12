@@ -44,7 +44,12 @@ exports.login = async (req, res) => {
         req.session.rol = usuario.rol;
         req.session.nombre = usuario.nombre;
 
-        res.json({ mensaje: "Bienvenido " + usuario.nombre, rol: usuario.rol });
+        res.json({ 
+            logueado: true,
+            nombre: usuario.nombre,
+            rol: usuario.rol,
+            mensaje: "Bienvenido " + usuario.nombre, rol: usuario.rol 
+        });
     } catch (error) {
         res.status(500).json({ mensaje: "Error en el servidor" });
     }
@@ -53,7 +58,7 @@ exports.login = async (req, res) => {
 // LOGOUT
 exports.logout = (req, res) => {
     req.session.destroy((err) => {
-		if (err) return res.status(500).send("Error al cerrar sesión");
+		if (err) return res.status(500).json({mensaje: "Error al cerrar sesión"});
 		res.clearCookie('connect.sid'); //Limpia la cookie del navegador
 		res.json({ mensaje: "Sesión cerrada" });
 	});	

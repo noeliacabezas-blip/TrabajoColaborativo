@@ -70,10 +70,10 @@ $(document).ready(function () {
 
 	function comprobarSesion() {
         $.getJSON("/api/usuario/estado", function (respuesta) {
-            if (respuesta.autenticado) {
+            if (respuesta.logueado) {
                 $("#bloque-formulario-comentario").show();
                 $("#estado-comentarios").html(
-                    `<div class="alert alert-info">Has iniciado sesión como <strong>${respuesta.usuario.nombre}</strong>.</div>`
+                    `<div class="alert alert-info">Has iniciado sesión como <strong>${respuesta.nombre}</strong>.</div>`
                 );
             } else {
                 $("#bloque-formulario-comentario").hide();
@@ -156,6 +156,10 @@ $(document).ready(function () {
     $("#form-comentario").on("submit", function (event) {
         event.preventDefault();
         enviarComentario();
+    });
+
+    $(document).on("usuarioLogueado", function(){
+        comprobarSesion();
     });
 
 
