@@ -1,15 +1,12 @@
 $(document).ready(function () {
-
     function obtenerIdCurso() {
         const params = new URLSearchParams(window.location.search);
         return params.get("id");
     }
 
-	
+    const idCurso = obtenerIdCurso();
 
     function cargarCurso() {
-        const idCurso = obtenerIdCurso();
-
         if (!idCurso) {
             $("#curso_detalle").html('<p class="text-center text-danger">No se ha indicado ningún curso.</p>');
             return;
@@ -35,6 +32,29 @@ $(document).ready(function () {
                 curso.profesorId ? curso.profesorId.especialidad : "No disponible"
             );
 
+            if ($("#curso-profesor-email").length) {
+                if (curso.profesorId && curso.profesorId.email) {
+                    $("#curso-profesor-email")
+                        .text(curso.profesorId.email)
+                        .attr("href", `mailto:${curso.profesorId.email}`);
+                } else {
+                    $("#curso-profesor-email")
+                        .text("No disponible")
+                        .removeAttr("href");
+                }
+            }
+
+            if ($("#profesor-foto").length) {
+                if (curso.profesorId && curso.profesorId.foto) {
+                    $("#profesor-foto")
+                        .attr("src", curso.profesorId.foto)
+                        .attr("alt", `Foto de ${curso.profesorId.nombre || "profesor"}`)
+                        .show();
+                } else {
+                    $("#profesor-foto").hide();
+                }
+            }
+
             $("#curso-descripcion").empty();
 
             if (curso.descripcion) {
@@ -44,6 +64,8 @@ $(document).ready(function () {
                         $("#curso-descripcion").append(`<p class="card-text">${texto}</p>`);
                     }
                 });
+            } else {
+                $("#curso-descripcion").html('<p class="card-text">Descripción no disponible.</p>');
             }
 
             $("#curso-temario").empty();
@@ -68,7 +90,7 @@ $(document).ready(function () {
         });
     }
 
-	function comprobarSesion() {
+    function comprobarSesion() {
         $.getJSON("/api/usuario/estado", function (respuesta) {
             if (respuesta.logueado) {
                 $("#bloque-formulario-comentario").show();
@@ -90,19 +112,31 @@ $(document).ready(function () {
     }
 
     function cargarComentarios() {
-		const idCurso = obtenerIdCurso();
+        if (!idCurso) {
+            $("#lista-comentarios").html(
+                '<div class="alert alert-danger">No se ha indicado un curso válido.</div>'
+            );
+            return;
+        }
+
         $.getJSON(`/api/comentarios/curso/${idCurso}`, function (comentarios) {
             const $lista = $("#lista-comentarios");
             $lista.empty();
 
-            if (comentarios.length === 0) {
+            if (!comentarios || comentarios.length === 0) {
                 $lista.html('<p class="text-muted">Todavía no hay comentarios para este curso.</p>');
                 return;
             }
 
             comentarios.forEach(function (c) {
                 const nombreUsuario = c.usuarioId?.nombre || "Usuario";
-                const fecha = new Date(c.fecha).toLocaleDateString("es-ES");
+                const fecha = c.fecha
+                    ? new Date(c.fecha).toLocaleDateString("es-ES")
+                    : "Fecha no disponible";
+
+                const puntuacion = Number(c.puntuacion) || 0;
+                const estrellasLlenas = "★".repeat(puntuacion);
+                const estrellasVacias = "☆".repeat(5 - puntuacion);
 
                 const tarjeta = `
                     <div class="border rounded p-3 mb-3 bg-light">
@@ -110,7 +144,7 @@ $(document).ready(function () {
                             <strong>${nombreUsuario}</strong>
                             <small class="text-muted">${fecha}</small>
                         </div>
-                        <p class="mb-2">Puntuación: ${"★".repeat(c.puntuacion)}${"☆".repeat(5 - c.puntuacion)}</p>
+                        <p class="mb-2">Puntuación: ${estrellasLlenas}${estrellasVacias}</p>
                         <p class="mb-0">${c.comentario}</p>
                     </div>
                 `;
@@ -125,11 +159,15 @@ $(document).ready(function () {
     }
 
     function enviarComentario() {
-		const idCurso = obtenerIdCurso();
+        if (!idCurso) {
+            alert("No se ha podido identificar el curso.");
+            return;
+        }
+
         const datos = {
             cursoId: idCurso,
             puntuacion: $("#puntuacion").val(),
-            comentario: $("#texto-comentario").val()
+            comentario: $("#texto-comentario").val().trim()
         };
 
         $.ajax({
@@ -152,21 +190,16 @@ $(document).ready(function () {
         window.print();
     });
 
-	
     $("#form-comentario").on("submit", function (event) {
         event.preventDefault();
         enviarComentario();
     });
 
-    $(document).on("usuarioLogueado", function(){
+    $(document).on("usuarioLogueado", function () {
         comprobarSesion();
     });
 
-
     cargarCurso();
-	cargarComentarios();
-	comprobarSesion();
+    cargarComentarios();
+    comprobarSesion();
 });
-
-
-
