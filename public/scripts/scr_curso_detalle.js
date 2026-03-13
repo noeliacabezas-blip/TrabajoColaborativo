@@ -78,6 +78,16 @@ $(document).ready(function () {
                 $("#curso-temario").append("<li>Temario no disponible</li>");
             }
 
+            if(curso.createdAt){
+                const fechaCreado = new Date(curso.createdAt).toLocaleString();
+                $("#curso-creado").append("Curso creado: " + fechaCreado)
+            }
+
+            if(curso.updatedAt){
+                const fechaModificado = new Date(curso.createdAt).toLocaleString();
+                $("#curso-modificado").append("Curso modificado: " + fechaModificado)
+            }
+
             document.title = `Formación Global Online | ${curso.titulo}`;
         }).fail(function (xhr) {
             let mensaje = "No se pudo cargar el curso.";
