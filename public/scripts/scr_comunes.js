@@ -56,7 +56,7 @@ $(document).ready(function(){
         event.preventDefault();
 
         const datosLogin = {
-           email: $("#usuario").val(),
+           email: $("#usuario").val().trim(),
            contrasenna: $("#password").val()
         };
         $.ajax({
