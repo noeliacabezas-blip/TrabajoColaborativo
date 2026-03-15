@@ -140,7 +140,12 @@ $(document).ready(function(){
                 // Actualiza el menú para que vuelva a mostrar "Iniciar Sesión"
                 actualiza_estado_sesion_menu({ logueado: false });
                 $(document).trigger("usuarioLogueado");
-               // window.location.reload();
+               
+                
+                // Si está en el panel admin va a index
+                if (window.location.pathname.includes("/admin")){
+                    window.location.href="/";
+                }
             },
             error: function(fallo) {
                 window.alert("Error al intentar cerrar sesión " + fallo.responseJSON.mensaje);

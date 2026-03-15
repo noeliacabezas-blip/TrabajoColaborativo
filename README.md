@@ -25,7 +25,7 @@ PORT=3000
 npm install
 ```
 
-## Carga inicial de datos
+## Carga inicial de datos  -> Ya están cargados los datos, no es necesario se han añadido más datos a través de la funcionalidad de la web
 
 ```bash
 node admin/carga_datos.js
@@ -55,9 +55,13 @@ Tras ejecutar `node admin/carga_usuarios.js` se crea este usuario administrador:
 - Email: `admin@formacionglobalonline.es`
 - Contraseña: `Temporal123`
 
+Ejemplo de un usuario con rol alumno:
+- Email: `jgarcia@formacionglobalonline.es` 
+- Contraseña: `Temporal123`   
+
 ## Funcionalidades incluidas
 
-- Portada con bloques dinámicos cargados desde servidor
+- Portada con bloques dinámicos cargados desde servidor  -> `Últimos cursos disponibles` y `Categorías destacadas`
 - Listado de cursos con filtros y búsqueda AJAX
 - Detalle de curso con profesor, comentarios y formulario para usuarios autenticados
 - Tabla de profesorado desde base de datos

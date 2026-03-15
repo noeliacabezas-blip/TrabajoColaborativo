@@ -1,11 +1,5 @@
 [
 	{
-		"nombre": "ADMIN",
-		"email": "admin@formacionglobalonline.es", 
-        "passwordHash": "Temporal123",         
-		"rol": "admin"
-	},
-	{
 		"nombre": "Diego Dominguez",
 		"email": "ddominguez@formacionglobalonline.es", 
         "passwordHash": "Temporal123",         

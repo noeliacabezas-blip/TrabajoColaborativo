@@ -156,7 +156,8 @@ exports.actualizarCurso = async (req, res, next) => {
                 profesorId: req.body.profesorId,
                 temario: normalizarTemario(req.body.temario)
             },
-            { new: true, runValidators: true }
+            //{ new: true, runValidators: true }
+            { returnDocument: 'after', runValidators: true }
         ).populate('profesorId');
 
         if (!curso) {
