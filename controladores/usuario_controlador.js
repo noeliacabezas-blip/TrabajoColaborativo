@@ -48,7 +48,7 @@ exports.login = async (req, res) => {
             logueado: true,
             nombre: usuario.nombre,
             rol: usuario.rol,
-            mensaje: "Bienvenido " + usuario.nombre, rol: usuario.rol 
+            mensaje: "Bienvenido " + usuario.nombre
         });
     } catch (error) {
         res.status(500).json({ mensaje: "Error en el servidor" });
