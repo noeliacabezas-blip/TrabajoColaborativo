@@ -80,12 +80,12 @@ $(document).ready(function () {
 
             if(curso.createdAt){
                 const fechaCreado = new Date(curso.createdAt).toLocaleString();
-                $("#curso-creado").append("Curso creado: " + fechaCreado)
+                $("#curso-creado").text("Curso creado: " + fechaCreado)
             }
 
             if(curso.updatedAt){
-                const fechaModificado = new Date(curso.createdAt).toLocaleString();
-                $("#curso-modificado").append("Curso modificado: " + fechaModificado)
+                const fechaModificado = new Date(curso.updatedAt).toLocaleString();
+                $("#curso-modificado").text("Curso modificado: " + fechaModificado)
             }
 
             document.title = `Formación Global Online | ${curso.titulo}`;
