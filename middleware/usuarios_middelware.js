@@ -4,12 +4,15 @@ exports.esAdmin = (req, res, next) => {
         return next();
     }
     // Si no, fuera
-    res.status(403).json({ mensaje: "Acceso denegado: Se requieren permisos de Admin" });
+    //res.status(404).json({ mensaje: "Acceso denegado: Se requieren permisos de Admin" });
+    res.status(404).render('404',{
+        mensaje: "Acceso denegado: Se requieren permisos de Admin"
+    });
 };
 
 exports.estaLogueado = (req, res, next) => {
     if (req.session && req.session.usuarioId) {
         return next();
     }
-    res.status(401).json({ mensaje: "Debes iniciar sesión" });
+    res.status(400).json({ mensaje: "Debes iniciar sesión" });
 };
